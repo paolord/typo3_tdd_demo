@@ -22,4 +22,4 @@ script:
   - >
     echo;
     echo "Running unit tests";
-    vendor\bin\phpunit.bat --colors -c Tests\UnitTests.xml Tests\Unit
+    vendor\\bin\\phpunit.bat --colors -c Tests\\UnitTests.xml Tests\\Unit
