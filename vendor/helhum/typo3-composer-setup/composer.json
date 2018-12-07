@@ -1,0 +1,43 @@
+{
+    "name": "helhum/typo3-composer-setup",
+    "description": "Set up required entry points for TYPO3 web directory",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Helmut Hummel",
+            "email": "info@helhum.io",
+            "homepage": "https://helhum.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-composer-installers": "^1.4 || ^2.0",
+        "typo3/minimal": "^7 || ^8 || ^9"
+    },
+    "suggest": {
+        "helhum/typo3-console": "TYPO3 Console is highly recommended for any TYPO3 composer setup.",
+        "pagemachine/typo3-composer-legacy-cli ": "Provides the legacy cli_dispatch.phpsh entry point for TYPO3."
+    },
+    "require-dev": {
+        "typo3/cms-core": "dev-TYPO3_8-7 as 8.7.9",
+        "typo3-console/php-server-command": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Helhum\\Typo3ComposerSetup\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "public"
+        },
+        "helhum/typo3-console": {
+            "install-extension-dummy": "0"
+        }
+    }
+}

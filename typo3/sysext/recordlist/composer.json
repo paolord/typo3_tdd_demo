@@ -1,0 +1,45 @@
+{
+	"name": "typo3/cms-recordlist",
+	"type": "typo3-cms-framework",
+	"description": "List of database-records",
+	"homepage": "https://typo3.org",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [{
+		"name": "TYPO3 Core Team",
+		"email": "typo3cms@typo3.org",
+		"role": "Developer"
+	}],
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"php": ">=7.0.0 <=7.2.99",
+		"typo3/cms-core": "8.7.20"
+	},
+	"conflict": {
+		"typo3/cms": "*"
+	},
+	"replace": {
+		"recordlist": "*"
+	},
+	"extra": {
+		"typo3/cms": {
+			"Package": {
+				"protected": true,
+				"partOfFactoryDefault": true,
+				"partOfMinimalUsableSystem": true
+			},
+			"extension-key": "recordlist"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\Recordlist\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"TYPO3\\CMS\\Recordlist\\Tests\\": "Tests/"
+		}
+	}
+}

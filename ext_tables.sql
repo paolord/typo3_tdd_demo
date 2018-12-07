@@ -25,3 +25,20 @@ CREATE TABLE tx_tdddemo_domain_model_post (
 	PRIMARY KEY (uid),
 	KEY parent (pid)
 );
+
+#
+# Table structure for table 'tx_tdddemo_domain_model_postrating'
+#
+CREATE TABLE tx_tdddemo_domain_model_postrating (
+
+	uid int(11) NOT NULL auto_increment,
+	pid int(11) DEFAULT '0' NOT NULL,
+	        
+	post_id int(11) DEFAULT '0' NOT NULL,
+	user_id int(11) DEFAULT '0' NOT NULL,
+	like int(11) DEFAULT '0' NOT NULL,
+	dislike int(11) DEFAULT '0' NOT NULL,
+
+	PRIMARY KEY (uid),
+	KEY parent (pid)
+);
