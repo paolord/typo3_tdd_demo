@@ -1,0 +1,25 @@
+language: php
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.1
+    - php: 7.0
+    - php: 7.2
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - parallel
+
+before_install:
+  - composer self-update
+  - composer --version
+
+script:
+  - >
+    echo;
+    echo "Running unit tests";
+    vendor\bin\phpunit.bat --colors -c Tests\UnitTests.xml Tests\Unit
