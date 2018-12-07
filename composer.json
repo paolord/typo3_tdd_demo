@@ -20,5 +20,8 @@
     },
     "require-dev": {
         "nimut/testing-framework": "^4.1"
+    },
+    "require": {
+        "typo3/cms-extbase": "8.7.20"
     }
 }
