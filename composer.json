@@ -1,0 +1,19 @@
+{
+    "name": "Angelo/tdd-demo",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Angelo Paolo Obispo",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Angelo\\TddDemo\\": "Classes"
+        }
+    }
+}
