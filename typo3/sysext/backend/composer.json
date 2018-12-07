@@ -1,0 +1,45 @@
+{
+	"name": "typo3/cms-backend",
+	"type": "typo3-cms-framework",
+	"description": "Classes for the TYPO3 backend.",
+	"homepage": "https://typo3.org",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [{
+		"name": "TYPO3 Core Team",
+		"email": "typo3cms@typo3.org",
+		"role": "Developer"
+	}],
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"php": ">=7.0.0 <=7.2.99",
+		"typo3/cms-core": "8.7.20"
+	},
+	"conflict": {
+		"typo3/cms": "*"
+	},
+	"replace": {
+		"backend": "*"
+	},
+	"extra": {
+		"typo3/cms": {
+			"Package": {
+				"protected": true,
+				"partOfFactoryDefault": true,
+				"partOfMinimalUsableSystem": true
+			},
+			"extension-key": "backend"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\Backend\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"TYPO3\\CMS\\Backend\\Tests\\": "Tests/"
+		}
+	}
+}

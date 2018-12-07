@@ -8,12 +8,17 @@
             "role": "Developer"
         }
     ],
-    "require": {
-        "typo3/cms-core": "^8.7.1"
-    },
     "autoload": {
         "psr-4": {
             "Angelo\\TddDemo\\": "Classes"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Angelo\\TddDemo\\Tests\\": "Tests"
+        }
+    },
+    "require-dev": {
+        "nimut/testing-framework": "^4.1"
     }
 }
